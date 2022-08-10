@@ -1,0 +1,3 @@
+/home/zyuhao/Desktop/Link to code/CA_Heat/cmake-build-debug/CMakeFiles/CA_Heat.dir
+/home/zyuhao/Desktop/Link to code/CA_Heat/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zyuhao/Desktop/Link to code/CA_Heat/cmake-build-debug/CMakeFiles/rebuild_cache.dir
