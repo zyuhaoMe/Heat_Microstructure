@@ -1,0 +1,3 @@
+/home/zyuhao/Desktop/thermal_multi_mpi/cmake-build-debug/CMakeFiles/thermal_multi_mpi.dir
+/home/zyuhao/Desktop/thermal_multi_mpi/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zyuhao/Desktop/thermal_multi_mpi/cmake-build-debug/CMakeFiles/rebuild_cache.dir

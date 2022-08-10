@@ -1,0 +1,3 @@
+/home/zyuhao/Desktop/Link to code/compare_analytical_FVM/cmake-build-debug/CMakeFiles/compare_analytical_FVM.dir
+/home/zyuhao/Desktop/Link to code/compare_analytical_FVM/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zyuhao/Desktop/Link to code/compare_analytical_FVM/cmake-build-debug/CMakeFiles/rebuild_cache.dir

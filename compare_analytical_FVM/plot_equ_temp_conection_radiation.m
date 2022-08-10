@@ -1,0 +1,70 @@
+% used to plot the curve of the equivalent temperature of boundary
+% due to heat convection and radiation
+
+% define material properties and meshsize
+IN625.dens = 8440;
+IN625.specHeat = 500;
+IN625.thermalCond = 16;
+IN625.absorp = 0.43;
+IN625.convecCoeff = 10;
+IN625.emissivity = 0.8;
+
+struct
+steel155.dens = 7770;
+steel155.specHeat = 420;
+steel155.thermalCond = 17.8;
+steel155.absorp = 0.22;
+steel155.convecCoeff = 10;
+steel155.emissivity = 0.8;
+
+% the possible range of the temperature at the point next to boundary
+temp_max = 3000; % the temperature of the vaperation
+temp_min = 300;
+len_temp_list = 5;
+temp_list = linspace(temp_min, temp_max, len_temp_list);
+
+plot_func_temp_boundary(temp_list, len_temp_list, IN625);
+
+%% calculate the plot abs(temp_p - temp_b) and temp_p
+len = 100;
+
+temp_p_list = 300 +  linspace(0, 5000, len);
+temp_b_list = zeros(1, len);
+
+for i = 1:len
+    temp_p = temp_p_list(i);
+    temp_0 = 300;
+    x0 = [temp_0-1 temp_p+1];
+    meshsize = 1e-5;
+    sb_const = 5.67e-8;
+
+    material = IN625;
+    
+    fun = @(T_b) sb_const * material.emissivity * (T_b.^4 - temp_0.^4) ...
+            + material.convecCoeff * (T_b - temp_0) + material.thermalCond * (-temp_p + T_b) ./ (meshsize / 2);
+    
+    temp_b_list(i) = fzero(fun, x0);
+end
+
+figure
+plot(temp_p_list, abs(temp_p_list - temp_b_list), LineWidth= 5);
+xlabel("T_p(K)", "FontSize",20)
+ylabel("|T_p - T_b|", "FontSize",20)
+ax = gca;
+ax.FontSize = 20;
+%% the function of plotting the equation containing equ-boundary temperature
+% the root would be the equ-boundary temperature
+function plot_func_temp_boundary(temp_list, len_temp_list, material)
+    meshsize = 1e-5;
+    sb_const = 5.67e-8;
+    temp_bound_list = 300:10:4000;
+    temp_0 = 300;
+    figure;
+    for i = len_temp_list
+        func_value_list = sb_const * material.emissivity * (temp_bound_list.^4 - temp_0.^4) ...
+            + material.convecCoeff * (temp_bound_list - temp_0) + material.thermalCond * (-temp_list(i) + temp_bound_list) ./ (meshsize / 2);
+        plot(temp_bound_list,func_value_list);
+        hold on
+    end
+    legend;
+end

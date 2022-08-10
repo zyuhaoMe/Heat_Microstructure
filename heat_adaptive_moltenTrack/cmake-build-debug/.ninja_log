@@ -1,0 +1,10 @@
+# ninja log v5
+0	146	1654651358912509732	CMakeFiles/thermal_multi_mpi.dir/MaterialClass.cpp.o	e30589dc6029a2eb
+2	475	1654902060289961529	CMakeFiles/thermal_multi_mpi.dir/ThermalHistOfCubeMoltenPoolTrack.cpp.o	6cba51608bab648f
+0	12	1654891039886908224	CMakeFiles/thermal_multi_mpi.dir/MoltenPoolPoint.cpp.o	25f313d20c621128
+475	544	1654902060357961706	../thermal_multi_mpi	e3bea772014db842
+1	166	1654890897579934547	CMakeFiles/thermal_multi_mpi.dir/LaserClass.cpp.o	b92d83627637c29b
+1	237	1654902060053960918	CMakeFiles/thermal_multi_mpi.dir/main.cpp.o	fc4b2df37b9885ee
+2	386	1654902060201961301	CMakeFiles/thermal_multi_mpi.dir/ThermalHistOfCube.cpp.o	a208647acbbb90d8
+1	316	1654902060133961125	CMakeFiles/thermal_multi_mpi.dir/ComputingCase.cpp.o	c1a846dd54fadf1f
+1	241	1654902060057960927	CMakeFiles/thermal_multi_mpi.dir/MultiTrackLaserClass.cpp.o	85ea5e83d38f3427
