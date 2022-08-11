@@ -3,7 +3,7 @@ This repo simulate the heat transfer and microstructure evolution during laser p
 This repo includes 3 independent sub-repos: CA_Heat, compare_analytical_FVM, heat_adaptive_moltenTrack.
 
 ## CA_Heat
-This is a c-based, process-oriented, serial program that simulates the heat transfer and microstructure in LPBF. This program is used for illustrating the basic physical mechanism used for simulation, such as heat transfer simulation using simplest analytical method, along with the dendrite growth simultion using cellular automata algorithm. This program did not apply any complex and adaptive numerical methods. Due to limitation of of serial program, this program can only deal with the simulation with very large time step and mesh size, and very short total time.
+This is a c-based, process-oriented, serial program that simulates the heat transfer and microstructure in LPBF. This program is used for illustrating the basic physical mechanism used for simulation, such as heat transfer simulation using simplest analytical method, along with the dendrite growth simultion using cellular automata algorithm. This program did not apply any complex and adaptive numerical methods. Due to limitation of the performance, this program can only deal with the simulation with very large time step and mesh size, and very short total time.
 
 ## compare_analytical_FVM
 This is a framework used for benchmarking performance and comparing consistency (simulation results vs experiment results) for different numerical methods. 
