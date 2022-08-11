@@ -17,7 +17,7 @@ This program output a serices of .dat file. Each .dat file is the temperature fi
 ## heat_adaptive_molten_pool
 This is the final framework that use semi-analytical method with mirroring boundary condition for heat transfer method, along with cellular automata for microstructure prediction method. 
 
-This program implemented a molten-pool-track algorithm that dynamically track the molten pool points during the previous time step, and quickly check and update the temperature within the motlen pool at current time step in a "envoling" way. This algorithm allow us to track the temperature from the laser spot center (which is highest temp) downwards to any customized temerature contours. In this way, the heat transfer in additive manufacturing, which usually has a relatively high spatial locality, could be accelerated without significantly losing accuracy.
+This program implemented a molten-pool-track algorithm that dynamically track the molten pool points during the previous time step, and quickly check and update the temperature within the motlen pool at current time step. This algorithm allow us to track the temperature from the laser spot center (which is highest temp) downwards to any customized temerature contours. In this way, the heat transfer in additive manufacturing, which usually has a relatively high spatial locality, could be accelerated without significantly losing accuracy.
 
 
 
