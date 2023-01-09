@@ -8,7 +8,7 @@ This is a c-based, process-oriented, serial program that simulates the heat tran
 ## compare_analytical_FVM
 This is a framework used for benchmarking performance and comparing consistency (simulation results vs experiment results) for different numerical methods. 
 
-This cpp-based program also allow user to define or create complex scanning strategy of laser scanning pattern, such as spiral pattern, zig-zag pattern, etc. User can also choose to overwrite the laser position and laser speed function to customized their own scanning pattern with any path shape and velocities. 
+This cpp-based program also allow user to define or create complex scanning strategy of laser scanning pattern, such as spiral pattern, zig-zag pattern, etc. User can also choose to overwrite the laser position and laser speed function to have self-defined scanning pattern with any path shape and velocities. 
 
 In the tempClass.h, implemented mainstream numerical methods includes analytical method, semi-analytical method, finite volume method with isolated boundary condition, finite volume method with radiative and convective boundary condition, semi-analytical method with mirroring boundary condition. 
 
@@ -17,7 +17,7 @@ This program output a serices of .dat file. Each .dat file is the temperature fi
 ## heat_adaptive_molten_pool
 This is the final framework that use semi-analytical method with mirroring boundary condition for heat transfer method, along with cellular automata for microstructure prediction method. 
 
-This program implemented a molten-pool-track algorithm that dynamically track the molten pool points during the previous time step, and quickly check and update the temperature within the motlen pool at current time step. This algorithm allow us to track the temperature from the laser spot center (which is highest temp) downwards to any customized temerature contours. In this way, the heat transfer in additive manufacturing, which usually has a relatively high spatial locality, could be accelerated without significantly losing accuracy.
+This program implemented a molten-pool-track algorithm that dynamically track the molten pool points during the previous time step, and quickly check and update the temperature within the motlen pool at current time step. This algorithm allow us to track the temperature from the laser spot center (which is highest temp) downwards to any customized temperature contours. At the same, an adaptive gaussian legendre quadrature is applied to effectively reduce the computational expense of numerical integration while maintaining a reasonable accuracy. In this way, the heat transfer in additive manufacturing, which usually has a relatively high spatial locality, could be accelerated without significantly losing accuracy.
 
 
 
